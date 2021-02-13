@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.teknis",
+      "nativeLanguage": "fr"
+    },
+    "jhipsterVersion": "6.9.0",
+    "applicationType": "monolith",
+    "baseName": "teknisTunisie",
+    "packageName": "com.teknis",
+    "packageFolder": "com/teknis",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MGIyOGY5ODEyZmM5OTY5ZmE3ZGY1YWI0MjRiODhiOGI5YzA5MTI3N2Y2MWFhMjA3OWI2MDg0ODhiMzM4N2FjYzBjZTgwMThlNDE1YzdjMTg3OThjOWFmYThhYzk5MmMzMjI0NzVkNjJjYmY4ZTMzZmJjMmEwNmQ5NDJjZjBlZmE=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1613250115097,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "fr",
+    "languages": ["fr", "ar-ly"],
+    "blueprints": []
+  }
+}
