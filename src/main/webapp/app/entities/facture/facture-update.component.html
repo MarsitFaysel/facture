@@ -1,0 +1,132 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-facture-heading" jhiTranslate="teknisTunisieApp.facture.home.createOrEditLabel">Create or edit a Facture</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="teknisTunisieApp.facture.numero" for="field_numero">Numero</label>
+                    <input type="number" class="form-control" name="numero" id="field_numero"
+                           formControlName="numero"/>
+                    <div *ngIf="editForm.get('numero')!.invalid && (editForm.get('numero')!.dirty || editForm.get('numero')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('numero')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('numero')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="teknisTunisieApp.facture.datePiece" for="field_datePiece">Date Piece</label>
+                    <div class="input-group">
+                        <input id="field_datePiece" type="text" class="form-control" name="datePiece" ngbDatepicker #datePieceDp="ngbDatepicker" formControlName="datePiece"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="datePieceDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                    <div *ngIf="editForm.get('datePiece')!.invalid && (editForm.get('datePiece')!.dirty || editForm.get('datePiece')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('datePiece')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="teknisTunisieApp.facture.client" for="field_client">Client</label>
+                    <input type="text" class="form-control" name="client" id="field_client"
+                           formControlName="client"/>
+                    <div *ngIf="editForm.get('client')!.invalid && (editForm.get('client')!.dirty || editForm.get('client')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('client')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="teknisTunisieApp.facture.factureRecuMail" for="field_factureRecuMail">Facture Recu Mail</label>
+                    <div class="input-group">
+                        <input id="field_factureRecuMail" type="text" class="form-control" name="factureRecuMail" ngbDatepicker #factureRecuMailDp="ngbDatepicker" formControlName="factureRecuMail"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="factureRecuMailDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="teknisTunisieApp.facture.factureRecuPhysique" for="field_factureRecuPhysique">Facture Recu Physique</label>
+                    <div class="input-group">
+                        <input id="field_factureRecuPhysique" type="text" class="form-control" name="factureRecuPhysique" ngbDatepicker #factureRecuPhysiqueDp="ngbDatepicker" formControlName="factureRecuPhysique"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="factureRecuPhysiqueDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="teknisTunisieApp.facture.blRecuMail" for="field_blRecuMail">Bl Recu Mail</label>
+                    <div class="input-group">
+                        <input id="field_blRecuMail" type="text" class="form-control" name="blRecuMail" ngbDatepicker #blRecuMailDp="ngbDatepicker" formControlName="blRecuMail"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="blRecuMailDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="teknisTunisieApp.facture.blRecuphysique" for="field_blRecuphysique">Bl Recuphysique</label>
+                    <div class="input-group">
+                        <input id="field_blRecuphysique" type="text" class="form-control" name="blRecuphysique" ngbDatepicker #blRecuphysiqueDp="ngbDatepicker" formControlName="blRecuphysique"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="blRecuphysiqueDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="teknisTunisieApp.facture.blVisa" for="field_blVisa">Bl Visa</label>
+                    <input type="checkbox" class="form-control" name="blVisa" id="field_blVisa"
+                           formControlName="blVisa"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="teknisTunisieApp.facture.commentaire" for="field_commentaire">Commentaire</label>
+                    <input type="text" class="form-control" name="commentaire" id="field_commentaire"
+                           formControlName="commentaire"/>
+                    <div *ngIf="editForm.get('commentaire')!.invalid && (editForm.get('commentaire')!.dirty || editForm.get('commentaire')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('commentaire')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 2000 }">
+                        This field cannot be longer than 2000 characters.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

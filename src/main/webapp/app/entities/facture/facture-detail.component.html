@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="facture">
+            <h2><span jhiTranslate="teknisTunisieApp.facture.detail.title">Facture</span> {{ facture.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="teknisTunisieApp.facture.numero">Numero</span></dt>
+                <dd>
+                    <span>{{ facture.numero }}</span>
+                </dd>
+                <dt><span jhiTranslate="teknisTunisieApp.facture.datePiece">Date Piece</span></dt>
+                <dd>
+                    <span>{{ facture.datePiece }}</span>
+                </dd>
+                <dt><span jhiTranslate="teknisTunisieApp.facture.client">Client</span></dt>
+                <dd>
+                    <span>{{ facture.client }}</span>
+                </dd>
+                <dt><span jhiTranslate="teknisTunisieApp.facture.blVisa">Bl Visa</span></dt>
+                <dd>
+                    <span>{{ facture.blVisa }}</span>
+                </dd>
+                <dt><span jhiTranslate="teknisTunisieApp.facture.commentaire">Commentaire</span></dt>
+                <dd>
+                    <span>{{ facture.commentaire }}</span>
+                </dd>
+                <dt><span jhiTranslate="teknisTunisieApp.facture.factureRecuMail">Facture Recu Mail</span></dt>
+                <dd>
+                    <span>{{ facture.factureRecuMail }}</span>
+                </dd>
+                <dt><span jhiTranslate="teknisTunisieApp.facture.factureRecuPhysique">Facture Recu Physique</span></dt>
+                <dd>
+                    <span>{{ facture.factureRecuPhysique }}</span>
+                </dd>
+                <dt><span jhiTranslate="teknisTunisieApp.facture.blRecuMail">Bl Recu Mail</span></dt>
+                <dd>
+                    <span>{{ facture.blRecuMail }}</span>
+                </dd>
+                <dt><span jhiTranslate="teknisTunisieApp.facture.blRecuphysique">Bl Recuphysique</span></dt>
+                <dd>
+                    <span>{{ facture.blRecuphysique }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/facture', facture.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+{
+  "teknisTunisieApp": {
+    "facture": {
+      "home": {
+        "title": "Factures",
+        "createLabel": "Créer un nouveau Facture",
+        "createOrEditLabel": "Créer ou éditer un Facture",
+        "notFound": "Aucun Facture trouvé"
+      },
+      "created": "Un nouveau Facture a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Facture avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Facture avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Facture {{ id }} ?"
+      },
+      "detail": {
+        "title": "Facture"
+      },
+      "numero": "Numero",
+      "datePiece": "Date Piece",
+      "client": "Client",
+      "blVisa": "Bl Visa",
+      "commentaire": "Commentaire",
+      "factureRecuMail": "Facture Recu Mail",
+      "factureRecuPhysique": "Facture Recu Physique",
+      "blRecuMail": "Bl Recu Mail",
+      "blRecuphysique": "Bl Recuphysique"
+    }
+  }
+}

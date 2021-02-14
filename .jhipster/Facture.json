@@ -1,0 +1,57 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "numero",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "datePiece",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "client",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "blVisa",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "commentaire",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "factureRecuMail",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "factureRecuPhysique",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "blRecuMail",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "blRecuphysique",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "changelogDate": "20210214072138",
+  "dto": "mapstruct",
+  "searchEngine": false,
+  "service": "serviceImpl",
+  "entityTableName": "facture",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination"
+}
