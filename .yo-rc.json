@@ -38,6 +38,9 @@
     "enableTranslation": true,
     "nativeLanguage": "fr",
     "languages": ["fr", "ar-ly"],
-    "blueprints": []
+    "blueprints": [],
+    "lastLiquibaseTimestamp": 1613287298000,
+    "herokuAppName": "teknis-tunisie",
+    "herokuDeployType": "jar"
   }
 }
